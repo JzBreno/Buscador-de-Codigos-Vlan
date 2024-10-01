@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Busca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #003366;
+            margin: 0;
+            padding: 20px;
+        }
+        .Main {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #003366;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative; 
+        }
+        h1 {
+            text-align: center;
+            color: #00509e;
+        }
+        .Buscador {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #00509e;
+            border-radius: 5px;
+            margin-right: 10px;
+            flex-grow: 1;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00509e;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003366;
+        }
+        p {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+            color: #00509e;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="Main">
+        <img src="teste.png" alt="Logo" class="logo">
+        <h1>Buscar Dados do DataCenter</h1>
+        <div class="Buscador">
+            <form action="/buscar" method="POST">
+                <input type="text" name="pon" placeholder="Digite o PON" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <p>{{ resultado }}</p>  
+    </div>
+</body>
+</html>
